@@ -86,15 +86,6 @@ I'm a passionate Full Stack Developer specializing in the **MERN stack**, with h
 - Cross-platform mobile interface built with React Native
 - **Stack:** `React Native` `Node.js` `MongoDB` `Redis`
 
----
-
-### Product Management System
-> Enterprise admin dashboard with analytics and scalable backend architecture.
-
-- Analytics dashboard with key business metrics
-- Full product lifecycle management
-- Modular, scalable architecture
-- **Stack:** `React` `Tailwind CSS` `MongoDB`
 
 ---
 
