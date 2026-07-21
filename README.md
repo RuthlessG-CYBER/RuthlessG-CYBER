@@ -2,115 +2,143 @@
 
 # Soumya Panda
 
-### Full Stack Developer · Android Developer · MERN Stack Specialist
+### Full Stack Developer | Android Developer | MERN Stack Developer
 
-*Building scalable web and mobile applications with modern technologies, clean architecture, and production-ready systems.*
+Building scalable web and mobile applications with modern technologies, clean architecture, and production-ready solutions.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ruthless-g-cyber.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RuthlessG-CYBER)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/soumya-panda)
-[![Email](https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white)](mailto:pandasoumya004@outlook.com)
+<p>
+  <a href="https://ruthless-g-cyber.vercel.app">
+    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+  </a>
+  <a href="https://github.com/RuthlessG-CYBER">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/soumya-panda">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="mailto:pandasoumya004@outlook.com">
+    <img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white" />
+  </a>
+</p>
 
 </div>
 
 ---
 
-## About Me
+# About Me
 
-I'm a passionate Full Stack Developer specializing in the **MERN stack**, with hands-on experience building production-grade **web**, **Android**, and **React Native** applications. I focus on clean architecture, scalable backends, and polished user experiences — from concept to deployment.
+I am a Full Stack Developer with experience building scalable web, Android, and cross-platform mobile applications. I enjoy creating reliable software using modern technologies while following clean architecture, best development practices, and maintainable code.
 
-- Currently building scalable full-stack and mobile applications
-- Always exploring new tools in the JS/TS ecosystem
-- Interested in system design, REST APIs, and cross-platform mobile development
-- Reach me at **pandasoumya004@outlook.com**
+I have worked on projects including e-commerce platforms, healthcare systems, real estate applications, and administrative dashboards, gaining practical experience across frontend, backend, database design, API development, and deployment.
 
 ---
 
-## Tech Stack
+# Tech Stack
 
-### Frontend
 <p>
-  <img src="https://skillicons.dev/icons?i=react,nextjs,ts,js,tailwind,html,css" />
-</p>
-
-### Backend
-<p>
-  <img src="https://skillicons.dev/icons?i=nodejs,express" />
-</p>
-
-### Databases
-<p>
-  <img src="https://skillicons.dev/icons?i=mongodb,firebase,redis" />
-</p>
-
-### Mobile Development
-<p>
-  <img src="https://skillicons.dev/icons?i=kotlin,androidstudio,react" />
-</p>
-
-### Tools & Platforms
-<p>
-  <img src="https://skillicons.dev/icons?i=git,github,vercel,postman,vscode,linux" />
+<img src="https://skillicons.dev/icons?i=react,nextjs,typescript,javascript,tailwind,html,css,nodejs,express,nestjs,mongodb,redis,firebase,kotlin,androidstudio,react,git,github,docker,linux,postman,vscode,vercel" />
 </p>
 
 ---
 
-## Featured Projects
+# Featured Projects
 
-### [Stylish — E-Commerce Android App](https://github.com/RuthlessG-CYBER/Stylish_E-Commerce_App)
-> Production-ready Android e-commerce application with full backend integration.
+## Stylish – E-Commerce Android Application
 
-- Secure user authentication and session management
-- Cart management, order placement, and real-time order tracking
-- Admin dashboard for product and order management
-- **Stack:** `Kotlin` `Node.js` `MongoDB`
+Production-ready Android application built using Kotlin with backend integration.
 
----
+**Key Features**
 
-### [RentHub — Real Estate Platform](https://rent-hub-frontend-five.vercel.app/)
-> Full-stack MERN application for browsing and listing rental properties.
+- Secure user authentication
+- Product browsing and search
+- Shopping cart and wishlist
+- Order placement and tracking
+- Admin product management
 
-- JWT-based authentication and protected routes
-- Property listings with advanced search and filtering
-- Production deployment on Vercel
-- **Stack:** `React` `TypeScript` `Node.js` `MongoDB`
-- [Live Demo](https://rent-hub-frontend-five.vercel.app/) · [Repository](https://github.com/RuthlessG-CYBER/RentHub_Frontend)
+**Technology**
 
----
+`Kotlin` `Node.js` `MongoDB`
 
-### [SmartQueue — Healthcare Booking System](https://github.com/RuthlessG-CYBER/Smart_Queue_App)
-> Scalable healthcare queue management system with a cross-platform mobile interface.
+**Repository**
 
-- Appointment booking and real-time queue management
-- Redis-powered performance for high-load scenarios
-- Cross-platform mobile interface built with React Native
-- **Stack:** `React Native` `Node.js` `MongoDB` `Redis`
-
+https://github.com/RuthlessG-CYBER/Stylish_E-Commerce_App
 
 ---
 
-## Expertise
+## RentHub – Real Estate Platform
 
-| Domain | Skills |
-|---|---|
-| Web Development | Full-stack MERN applications, REST API design, SSR with Next.js |
-| Mobile Development | Android (Kotlin), React Native cross-platform apps |
-| Backend & Databases | Node.js, Express, MongoDB, Firebase, Redis |
-| Architecture | Scalable system design, clean code principles, production deployment |
-| UI Development | Modern interfaces with React, TypeScript, and Tailwind CSS |
+A full-stack MERN application for property listing and rental management.
+
+**Key Features**
+
+- JWT Authentication
+- Property search and filtering
+- Responsive user interface
+- Secure REST APIs
+- Production deployment
+
+**Technology**
+
+`React` `TypeScript` `Node.js` `MongoDB`
+
+**Live Demo**
+
+https://rent-hub-frontend-five.vercel.app/
+
+**Repository**
+
+https://github.com/RuthlessG-CYBER/RentHub_Frontend
 
 ---
 
+## SmartQueue – Healthcare Booking System
 
-## Contact
+A healthcare management platform with a React Native mobile application.
+
+**Key Features**
+
+- Appointment scheduling
+- Queue management
+- Real-time updates
+- Redis caching
+- Cross-platform mobile application
+
+**Technology**
+
+`React Native` `Node.js` `MongoDB` `Redis`
+
+**Repository**
+
+https://github.com/RuthlessG-CYBER/Smart_Queue_App
+
+---
+
+# Technical Expertise
+
+| Area | Technologies |
+|------|--------------|
+| Frontend Development | React, Next.js, TypeScript, JavaScript, Tailwind CSS |
+| Backend Development | Node.js, Express.js, NestJS, REST APIs |
+| Mobile Development | Kotlin, React Native |
+| Database | MongoDB, Firebase, Redis |
+| DevOps & Tools | Git, GitHub, Docker, Linux, Vercel, Postman |
+| Software Practices | Clean Architecture, MVC, API Design, Deployment |
+
+---
+
+# Contact
+
+| Platform | Link |
+|----------|------|
+| Portfolio | https://ruthless-g-cyber.vercel.app |
+| GitHub | https://github.com/RuthlessG-CYBER |
+| LinkedIn | https://linkedin.com/in/soumya-panda |
+| Email | pandasoumya004@outlook.com |
+
+---
 
 <div align="center">
 
-| Platform | Link |
-|---|---|
-| Portfolio | [ruthless-g-cyber.vercel.app](https://ruthless-g-cyber.vercel.app/) |
-| LinkedIn | [linkedin.com/in/soumya-panda](https://linkedin.com/in/soumya-panda) |
-| GitHub | [github.com/RuthlessG-CYBER](https://github.com/RuthlessG-CYBER) |
-| Email | [pandasoumya004@outlook.com](mailto:pandasoumya004@outlook.com) |
+Building scalable software with a focus on performance, maintainability, and user experience.
 
 </div>
