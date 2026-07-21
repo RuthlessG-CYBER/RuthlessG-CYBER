@@ -8,7 +8,7 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ruthless-g-cyber.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RuthlessG-CYBER)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-link)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/soumya-panda)
 [![Email](https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoftoutlook&logoColor=white)](mailto:pandasoumya004@outlook.com)
 
 </div>
@@ -109,7 +109,7 @@ I'm a passionate Full Stack Developer specializing in the **MERN stack**, with h
 | Platform | Link |
 |---|---|
 | Portfolio | [ruthless-g-cyber.vercel.app](https://ruthless-g-cyber.vercel.app/) |
-| LinkedIn | [linkedin.com/in/your-link](https://linkedin.com/in/your-link) |
+| LinkedIn | [linkedin.com/in/soumya-panda](https://linkedin.com/in/soumya-panda) |
 | GitHub | [github.com/RuthlessG-CYBER](https://github.com/RuthlessG-CYBER) |
 | Email | [pandasoumya004@outlook.com](mailto:pandasoumya004@outlook.com) |
 
