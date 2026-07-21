@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar } from "lucide-react";
 
-
 interface ExperienceItemProps {
   exp: {
     role: string;
@@ -15,7 +14,6 @@ interface ExperienceItemProps {
   index: number;
 }
 export default function Experience() {
-
   const experiences = [
     {
       role: "Full Stack Developer Intern",
@@ -35,97 +33,97 @@ export default function Experience() {
     },
   ];
 
-
-function ExperienceItem({ exp, index }: ExperienceItemProps) {
+  function ExperienceItem({ exp, index }: ExperienceItemProps) {
+    const isFirst = index === 0;
+    
     return (
       <motion.div
         key={index}
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="relative pl-10 border-l border-white/10"
+        className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:border-cyan-200 transition-colors duration-300 overflow-hidden"
       >
+        {/* Active Indicator for the most recent role */}
+        {isFirst && (
+          <div className="absolute top-0 right-0 px-4 py-1 bg-cyan-100 text-cyan-600 text-[10px] font-bold uppercase tracking-widest rounded-bl-xl border-b border-l border-cyan-200">
+            Present
+          </div>
+        )}
 
-        <div className="absolute left-0 top-2 w-4 h-4 bg-blue-500 rounded-full shadow-lg shadow-blue-500/30" />
-
-        <div className="mb-10">
-
-          <div className="flex items-center gap-3 text-white/60 text-sm mb-2">
-            <Calendar size={16} />
-            {exp.period}
+        <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
+          {/* Company Logo Badge */}
+          <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center">
+            <span className="text-2xl font-black text-gray-400">
+              {exp.company.charAt(0)}
+            </span>
           </div>
 
-          <h3 className="text-white text-xl font-semibold">
-            {exp.role}
-          </h3>
+          <div className="flex-1">
+            <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h3 className="text-gray-900 text-2xl font-bold">
+                {exp.role}
+              </h3>
+              <div className="flex items-center gap-2 text-gray-500 text-sm font-semibold bg-gray-50 px-3 py-1 rounded-full border border-gray-100">
+                <Calendar size={14} className="text-gray-400" />
+                {exp.period}
+              </div>
+            </div>
 
-          <div className="flex items-center gap-2 text-blue-400 text-sm mt-1">
-            <Briefcase size={16} />
-            {exp.company}
+            <div className="flex items-center gap-2 text-[#06b6d4] text-sm font-bold tracking-wide uppercase mb-4">
+              <Briefcase size={14} />
+              {exp.company}
+            </div>
+
+            <p className="text-gray-600 leading-relaxed mb-6">
+              {exp.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2 pt-5 border-t border-gray-100">
+              {exp.skills.map((skill, i) => (
+                <span
+                  key={i}
+                  className="text-[11px] px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-md text-gray-600 font-bold tracking-wide uppercase"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
-
-          <p className="text-white/60 mt-3 max-w-xl">
-            {exp.description}
-          </p>
-
-          <div className="flex flex-wrap gap-2 mt-4">
-            {exp.skills.map((skill, i) => (
-              <span
-                key={i}
-                className="text-xs px-3 py-1 bg-white/5 border border-white/10 rounded text-white/60"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-
         </div>
-
       </motion.div>
     );
   }
 
-
   return (
-    <section id="experience" className="py-28">
-
-      <div className="mx-auto px-10 lg:px-20">
-
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-
+    <section id="experience" className="py-28 bg-gray-50/30">
+      <div className="px-8 md:px-20 w-full">
+        <div className="flex flex-col gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="sticky top-32"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full"
           >
-
-            <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase">
-              Experience
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">
-
-              Professional{" "}
-
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-blue-400">
+            <div className="flex-1">
+              <h2 className="text-5xl md:text-7xl font-black text-[#06b6d4] tracking-widest uppercase">
                 Experience
-              </span>
-
-            </h2>
-
-            <p className="text-white/60 mt-4 max-w-md">
-              My journey building scalable applications, working with modern technologies, and solving real-world problems.
-            </p>
-
+              </h2>
+            </div>
+            
+            <div className="flex-1 md:text-right">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Professional Experience
+              </h3>
+              <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
+                My journey building scalable applications, working with modern technologies, and solving real-world problems.
+              </p>
+            </div>
           </motion.div>
 
-
-          <div>
-
+          <div className="grid lg:grid-cols-2 gap-12">
             {experiences.map((exp, index) => (
               <ExperienceItem
                 key={index}
@@ -133,14 +131,9 @@ function ExperienceItem({ exp, index }: ExperienceItemProps) {
                 index={index}
               />
             ))}
-
           </div>
-
-
         </div>
-
       </div>
-
     </section>
   );
 }

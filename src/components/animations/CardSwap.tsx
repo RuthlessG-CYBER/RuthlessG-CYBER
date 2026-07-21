@@ -119,7 +119,10 @@ const CardSwap: React.FC<CardSwapProps> = ({
       tlRef.current = tl;
 
       tl.to(elFront, {
-        y: '+=500',
+        x: '-=600',
+        y: '+=100',
+        rotationZ: -10,
+        opacity: 0,
         duration: config.durDrop,
         ease: config.ease
       });
@@ -157,6 +160,8 @@ const CardSwap: React.FC<CardSwapProps> = ({
           x: backSlot.x,
           y: backSlot.y,
           z: backSlot.z,
+          rotationZ: 0,
+          opacity: 1,
           duration: config.durReturn,
           ease: config.ease
         },

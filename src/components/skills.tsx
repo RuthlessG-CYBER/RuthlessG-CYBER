@@ -38,7 +38,7 @@ const techLogos = [
 export default function Skills() {
   const logoItems = techLogos.map((logo) => ({
     node: (
-      <div className="text-white text-5xl opacity-80 hover:opacity-100 hover:text-blue-400 transition-all duration-300">
+      <div className="text-gray-400 text-5xl hover:text-[#06b6d4] transition-all duration-300">
         {logo.node}
       </div>
     ),
@@ -46,77 +46,77 @@ export default function Skills() {
   }));
 
   return (
-    <section id="skills" className="py-28 relative overflow-hidden">
+    <section id="skills" className="py-28 relative overflow-hidden bg-gray-50/50">
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.03]"
+        className="absolute inset-0 pointer-events-none opacity-[0.2]"
         style={{
           backgroundImage:
-            "radial-gradient(circle, rgba(255,255,255,0.8) 1px, transparent 1px)",
+            "radial-gradient(circle, rgba(0,0,0,0.2) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
         }}
       />
 
-      <div className="mx-auto px-10 lg:px-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase mb-2">
+      <div className="px-8 md:px-20 w-full flex flex-col gap-16 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full"
+        >
+          <div className="flex-1">
+            <h2 className="text-5xl md:text-7xl font-black text-[#06b6d4] tracking-widest uppercase">
               Skills
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">
-              Technologies I{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-blue-400">
-                Work With
-              </span>
             </h2>
-
-            <p className="text-white/60 max-w-xl mt-4">
+          </div>
+          
+          <div className="flex-1 md:text-right">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Technical Proficiency
+            </h3>
+            <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
               Modern tools and technologies I use to build scalable,
               high-performance applications.
             </p>
-          </motion.div>
+          </div>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="relative w-full overflow-hidden"
-            style={{
-              WebkitMaskImage:
-                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
-              maskImage:
-                "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
-            }}
-          >
-            <div className="py-4">
-              <LogoLoop
-                logos={logoItems}
-                speed={80}
-                direction="left"
-                logoHeight={48}
-                gap={80}
-                hoverSpeed={25}
-                scaleOnHover
-              />
-            </div>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="relative w-full overflow-hidden"
+          style={{
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+            maskImage:
+              "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
+          }}
+        >
+          <div className="py-4">
+            <LogoLoop
+              logos={logoItems}
+              speed={80}
+              direction="left"
+              logoHeight={48}
+              gap={80}
+              hoverSpeed={25}
+              scaleOnHover
+            />
+          </div>
 
-            <div className="py-4 mt-4">
-              <LogoLoop
-                logos={logoItems}
-                speed={80}
-                direction="right"
-                logoHeight={48}
-                gap={80}
-                hoverSpeed={25}
-                scaleOnHover
-              />
-            </div>
-          </motion.div>
-        </div>
+          <div className="py-4 mt-4">
+            <LogoLoop
+              logos={logoItems}
+              speed={80}
+              direction="right"
+              logoHeight={48}
+              gap={80}
+              hoverSpeed={25}
+              scaleOnHover
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );

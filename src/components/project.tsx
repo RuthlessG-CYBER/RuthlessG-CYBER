@@ -7,6 +7,30 @@ import { FaAndroid } from "react-icons/fa";
 export default function Projects() {
   const projects = [
     {
+      title: "LhoShop eCommerce App",
+      description:
+        "A full-scale eCommerce platform similar to Flipkart, featuring a modern shopping app and a complete admin management panel.",
+      image:
+        "/lhoshop.jpg",
+      githubUrl:
+        "https://github.com/RuthlessG-CYBER/LhoShop_App",
+      adminGithubUrl:
+        "https://github.com/RuthlessG-CYBER/LhoShop_E-commerce_AdminPanel_Website",
+      appLink:
+        "https://drive.google.com/file/d/1agAfTkSoYIgtSIxN1kDX44els9FyNnCd/view?usp=sharing",
+      tags: ["React Native", "Node.js", "MongoDB", "Admin Panel"],
+    },
+    {
+      title: "Artisan Haven",
+      description:
+        "An eco-friendly e-commerce store offering rustic healthy cakes, wholesome homemade cookies, and sustainable recycled products.",
+      image:
+        "/artisan-products.jpg",
+      githubUrl:
+        "https://github.com/RuthlessG-CYBER/artisan_haven",
+      tags: ["TypeScript", "React", "Tailwind CSS"],
+    },
+    {
       title: "Stylish E-Commerce App",
       description:
         "Modern ecommerce mobile app with secure payments, order tracking, and admin dashboard.",
@@ -53,6 +77,7 @@ export default function Projects() {
     image: string;
     liveUrl?: string;
     githubUrl?: string;
+    adminGithubUrl?: string;
     appLink?: string;
     tags: string[];
   };
@@ -67,30 +92,51 @@ export default function Projects() {
     return (
       <motion.div
         key={index}
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        whileHover={{ y: -8 }}
-        className="group border border-white/10 rounded-xl overflow-hidden bg-white/[0.03] hover:bg-white/[0.05] transition-all duration-300"
+        className="relative flex flex-col xl:flex-row bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:border-cyan-200 transition-colors duration-300 h-full"
       >
-        <div className="relative h-[200px] overflow-hidden">
+        <div className="relative w-full xl:w-2/5 h-[200px] xl:h-auto overflow-hidden border-b xl:border-b-0 xl:border-r border-gray-100 bg-gray-50 shrink-0">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-500 ease-out"
           />
+        </div>
 
-          <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-3 transition duration-300">
+        <div className="relative z-10 p-6 flex-1 flex flex-col">
+          <div className="flex justify-between items-start mb-2">
+            <h3 className="text-gray-900 font-bold text-xl line-clamp-1">{project.title}</h3>
+            <div className="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center shrink-0 ml-2">
+              <ArrowUpRight size={16} className="text-gray-400" />
+            </div>
+          </div>
+
+          <p className="text-gray-500 text-sm mb-4 leading-relaxed line-clamp-2 xl:line-clamp-3">{project.description}</p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            {project.tags.map((tag, tagIndex) => (
+              <span
+                key={tagIndex}
+                className="text-[10px] px-2.5 py-1 bg-gray-50 border border-gray-200 rounded-md text-gray-600 font-bold tracking-wide uppercase"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 pt-5 border-t border-gray-100 mt-auto">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white text-black px-4 py-2 rounded-full text-xs font-semibold flex items-center gap-1"
+                className="flex-1 bg-[#06b6d4] text-white px-3 py-2 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm hover:bg-[#0891b2] transition-colors whitespace-nowrap"
               >
                 <ExternalLink size={14} />
-                Live
+                Live Demo
               </a>
             )}
 
@@ -99,10 +145,22 @@ export default function Projects() {
                 href={project.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black text-white px-4 py-2 rounded-full text-xs border border-white/20 flex items-center gap-1"
+                className="flex-1 bg-white border border-gray-200 text-gray-700 px-3 py-2 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm hover:bg-gray-50 transition-colors whitespace-nowrap"
               >
                 <Github size={14} />
-                Code
+                App Source
+              </a>
+            )}
+
+            {project.adminGithubUrl && (
+              <a
+                href={project.adminGithubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-white border border-gray-200 text-gray-700 px-3 py-2 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm hover:bg-gray-50 transition-colors whitespace-nowrap"
+              >
+                <Github size={14} />
+                Admin Panel
               </a>
             )}
 
@@ -111,33 +169,12 @@ export default function Projects() {
                 href={project.appLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-emerald-600 text-white px-4 py-2 rounded-full text-xs flex items-center gap-1"
+                className="flex-1 bg-green-600 text-white px-3 py-2 rounded-lg text-[11px] font-bold flex items-center justify-center gap-1.5 shadow-sm hover:bg-green-700 transition-colors whitespace-nowrap"
               >
                 <FaAndroid size={14} />
-                APK
+                Download
               </a>
             )}
-          </div>
-        </div>
-
-        <div className="p-5">
-          <div className="flex justify-between items-start">
-            <h3 className="text-white font-semibold">{project.title}</h3>
-
-            <ArrowUpRight size={18} className="text-white/40" />
-          </div>
-
-          <p className="text-white/50 text-sm mt-2">{project.description}</p>
-
-          <div className="flex flex-wrap gap-2 mt-3">
-            {project.tags.map((tag, tagIndex) => (
-              <span
-                key={tagIndex}
-                className="text-xs px-2 py-1 bg-white/5 border border-white/10 rounded text-white/60"
-              >
-                {tag}
-              </span>
-            ))}
           </div>
         </div>
       </motion.div>
@@ -145,34 +182,34 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="py-28">
-      <div className="mx-auto px-10 lg:px-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+    <section id="projects" className="py-28 bg-white/50">
+      <div className="px-8 md:px-20 w-full">
+        <div className="flex flex-col gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="sticky top-32"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-8 w-full"
           >
-            <p className="text-blue-400 text-sm font-semibold tracking-widest uppercase">
-              Projects
-            </p>
-
-            <h2 className="text-4xl md:text-5xl font-bold text-white mt-3">
-              Real-World & Best{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-violet-400 to-blue-400">
+            <div className="flex-1">
+              <h2 className="text-5xl md:text-7xl font-black text-[#06b6d4] tracking-widest uppercase">
                 Projects
-              </span>
-            </h2>
-
-            <p className="text-white/60 mt-4 max-w-md">
-              Production-ready applications built using modern technologies,
-              scalable architecture, and real-world business logic.
-            </p>
+              </h2>
+            </div>
+            
+            <div className="flex-1 md:text-right">
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+                Real-World & Best Projects
+              </h3>
+              <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
+                Production-ready applications built using modern technologies,
+                scalable architecture, and real-world business logic.
+              </p>
+            </div>
           </motion.div>
 
-          <div className="grid gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
             {projects.map((project, index) => (
               <ProjectCard key={index} project={project} index={index} />
             ))}
