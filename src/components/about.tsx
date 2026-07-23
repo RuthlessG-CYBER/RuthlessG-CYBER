@@ -37,7 +37,7 @@ export default function About() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-white/50" id="about">
+    <section className="py-24 relative overflow-hidden bg-[#050505]/50" id="about">
       <div className="px-8 md:px-20 w-full">
         <div className="flex flex-col gap-16">
           <motion.div
@@ -54,10 +54,10 @@ export default function About() {
             </div>
             
             <div className="flex-1 md:text-right">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h3 className="text-3xl md:text-4xl font-bold text-white">
                 Who is Soumya Panda?
               </h3>
-              <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
+              <p className="text-gray-400 mt-4 leading-relaxed max-w-xl md:ml-auto">
                 I'm a Full-Stack MERN and Android Developer passionate about building scalable, high-performance applications.
               </p>
             </div>
@@ -70,7 +70,7 @@ export default function About() {
               transition={{ duration: 0.6 }}
               className="flex flex-col gap-10"
             >
-              <div className="text-gray-600 leading-relaxed text-lg space-y-6">
+              <div className="text-gray-400 leading-relaxed text-lg space-y-6">
                 <p>
                   I work across the entire development stack, from designing responsive frontend interfaces to developing secure backend APIs and native Android apps.
                 </p>
@@ -86,9 +86,9 @@ export default function About() {
                   { label: "Months Work Exp.", value: "4" },
                   { label: "Native Apps", value: "Android" },
                 ].map((stat, i) => (
-                  <div key={i} className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:border-cyan-200 transition-colors duration-300">
+                  <div key={i} className="bg-[#0f0f11] border border-white/10 rounded-2xl p-6 shadow-sm hover:border-cyan-200 transition-colors duration-300">
                     <h3 className="text-[#06b6d4] text-3xl font-black mb-1">{stat.value}</h3>
-                    <p className="text-gray-500 text-sm font-semibold">{stat.label}</p>
+                    <p className="text-gray-400 text-sm font-semibold">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -105,17 +105,17 @@ export default function About() {
                 return (
                   <motion.div
                     key={index}
-                    className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:border-cyan-200 transition-colors duration-300"
+                    className="bg-[#0f0f11] border border-white/10 rounded-2xl p-6 shadow-sm hover:border-cyan-200 transition-colors duration-300"
                   >
-                    <div className="w-14 h-14 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center mb-5">
-                      <Icon className="text-gray-500" size={26} />
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-5">
+                      <Icon className="text-gray-400" size={26} />
                     </div>
                     
-                    <h3 className="text-gray-900 text-lg font-bold mb-2">
+                    <h3 className="text-white text-lg font-bold mb-2">
                       {stack.title}
                     </h3>
                     
-                    <p className="text-gray-500 text-sm mb-5 leading-relaxed">
+                    <p className="text-gray-400 text-sm mb-5 leading-relaxed">
                       {stack.description}
                     </p>
                     
@@ -123,7 +123,7 @@ export default function About() {
                       {stack.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-bold px-2.5 py-1 bg-gray-50 text-gray-600 border border-gray-100 rounded-md uppercase tracking-wide"
+                          className="text-[10px] font-bold px-2.5 py-1 bg-white/5 text-gray-400 border border-white/5 rounded-md uppercase tracking-wide"
                         >
                           {tech}
                         </span>

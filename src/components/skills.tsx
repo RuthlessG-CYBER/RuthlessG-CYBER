@@ -46,7 +46,7 @@ export default function Skills() {
   }));
 
   return (
-    <section id="skills" className="py-28 relative overflow-hidden bg-gray-50/50">
+    <section id="skills" className="py-28 relative overflow-hidden bg-white/5/50">
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.2]"
         style={{
@@ -71,10 +71,10 @@ export default function Skills() {
           </div>
           
           <div className="flex-1 md:text-right">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h3 className="text-3xl md:text-4xl font-bold text-white">
               Technical Proficiency
             </h3>
-            <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
+            <p className="text-gray-400 mt-4 leading-relaxed max-w-xl md:ml-auto">
               Modern tools and technologies I use to build scalable,
               high-performance applications.
             </p>

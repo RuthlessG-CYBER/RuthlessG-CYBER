@@ -34,7 +34,7 @@ export default function Experience() {
   ];
 
   function ExperienceItem({ exp, index }: ExperienceItemProps) {
-    const isFirst = index === 0;
+    // const isFirst = index === 0;
     
     return (
       <motion.div
@@ -43,18 +43,18 @@ export default function Experience() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
-        className="relative bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:border-cyan-200 transition-colors duration-300 overflow-hidden"
+        className="relative bg-[#0f0f11] border border-white/10 rounded-2xl p-8 shadow-sm hover:border-cyan-200 transition-colors duration-300 overflow-hidden"
       >
         {/* Active Indicator for the most recent role */}
-        {isFirst && (
+        {/* {isFirst && (
           <div className="absolute top-0 right-0 px-4 py-1 bg-cyan-100 text-cyan-600 text-[10px] font-bold uppercase tracking-widest rounded-bl-xl border-b border-l border-cyan-200">
             Present
           </div>
-        )}
+        )} */}
 
         <div className="relative z-10 flex flex-col md:flex-row gap-6 items-start">
           {/* Company Logo Badge */}
-          <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-gray-50 border border-gray-200 flex items-center justify-center">
+          <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">
             <span className="text-2xl font-black text-gray-400">
               {exp.company.charAt(0)}
             </span>
@@ -62,10 +62,10 @@ export default function Experience() {
 
           <div className="flex-1">
             <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <h3 className="text-gray-900 text-2xl font-bold">
+              <h3 className="text-white text-2xl font-bold">
                 {exp.role}
               </h3>
-              <div className="flex items-center gap-2 text-gray-500 text-sm font-semibold bg-gray-50 px-3 py-1 rounded-full border border-gray-100">
+              <div className="flex items-center gap-2 text-gray-400 text-sm font-semibold bg-white/5 px-3 py-1 rounded-full border border-white/5">
                 <Calendar size={14} className="text-gray-400" />
                 {exp.period}
               </div>
@@ -76,15 +76,15 @@ export default function Experience() {
               {exp.company}
             </div>
 
-            <p className="text-gray-600 leading-relaxed mb-6">
+            <p className="text-gray-400 leading-relaxed mb-6">
               {exp.description}
             </p>
 
-            <div className="flex flex-wrap gap-2 pt-5 border-t border-gray-100">
+            <div className="flex flex-wrap gap-2 pt-5 border-t border-white/5">
               {exp.skills.map((skill, i) => (
                 <span
                   key={i}
-                  className="text-[11px] px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-md text-gray-600 font-bold tracking-wide uppercase"
+                  className="text-[11px] px-3 py-1.5 bg-white/5 border border-white/10 rounded-md text-gray-400 font-bold tracking-wide uppercase"
                 >
                   {skill}
                 </span>
@@ -97,7 +97,7 @@ export default function Experience() {
   }
 
   return (
-    <section id="experience" className="py-28 bg-gray-50/30">
+    <section id="experience" className="py-28 bg-white/5/30">
       <div className="px-8 md:px-20 w-full">
         <div className="flex flex-col gap-16">
           <motion.div
@@ -114,10 +114,10 @@ export default function Experience() {
             </div>
             
             <div className="flex-1 md:text-right">
-              <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h3 className="text-3xl md:text-4xl font-bold text-white">
                 Professional Experience
               </h3>
-              <p className="text-gray-600 mt-4 leading-relaxed max-w-xl md:ml-auto">
+              <p className="text-gray-400 mt-4 leading-relaxed max-w-xl md:ml-auto">
                 My journey building scalable applications, working with modern technologies, and solving real-world problems.
               </p>
             </div>

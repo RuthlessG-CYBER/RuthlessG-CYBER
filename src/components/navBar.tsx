@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ModeToggle from "./mode-toggle";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -29,7 +28,7 @@ const Navbar = () => {
       transition={{ duration: 0.4, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm"
+          ? "bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/10 shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -37,10 +36,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-14">
 
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-cyan-50 text-cyan-500 font-bold">
-              {">_"}
+          <div className="flex items-center gap-3">
+            {/* SP Logo Icon */}
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-gradient-to-br from-[#0a0a0a] to-gray-900 shadow-[0_0_15px_rgba(6,182,212,0.2)] overflow-hidden group">
+              <div className="absolute inset-0 bg-cyan-500/10 group-hover:bg-cyan-500/20 transition-colors duration-300"></div>
+              <span className="text-white font-bold">
+                SP
+              </span>
             </div>
+            {/* Welcome Text */}
+            <span className="text-xl font-bold text-white tracking-wide">
+              Welcome
+            </span>
           </div>
 
           {/* Right Navigation Links */}
@@ -50,7 +57,7 @@ const Navbar = () => {
                 <motion.a
                   href={item.href}
                   whileHover={{ y: -1 }}
-                  className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                  className="text-sm font-medium text-gray-400 hover:text-white transition-colors duration-200"
                 >
                   {item.name}
                 </motion.a>
